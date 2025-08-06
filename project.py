@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 # ============ Gemini Setup ============
 # NOTE: For security, never expose API keys directly in deployed apps.
-genai.configure(api_key="AIzaSyAZi9PQBox77_dM409io8CSgIPU8V9w71k")
+genai.configure(api_key= st.secrets["apikey"])
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.set_page_config(page_title="Financial Learning Helper")
